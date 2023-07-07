@@ -309,7 +309,7 @@ class SkillsGetter:
             id_ = matcher.vocab.strings[match_id]
 
             # add
-            if text_obj[start].is_matchable:
+            if start in text_obj and text_obj[start].is_matchable:
                 skills.append({'skill_id': id_+'_oneToken',
                                'doc_node_value': str(doc[start:end]),
                                'doc_node_id': [start],
